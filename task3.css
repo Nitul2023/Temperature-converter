@@ -1,126 +1,159 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* Main Section */
-section {
-    min-height: 100vh;
-}
-
-/* Background container */
-.container {
-    min-height: 100vh;
-    width: 100%;
-    background: url("./volcano.jpg") no-repeat center center;
-    background-size: cover;
-
+.section {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Dashboard card */
-.dashboard {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
-    padding: 30px;
-    width: 90%;
-    max-width: 500px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-}
-
-/* Title */
-.dashboard h2 {
-    font-size: 2rem;
-    color: rgb(129, 162, 228);
-    text-align: center;
-}
-
-/* Labels */
-.dashboard label {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #000;
-}
-
-/* Input */
-.dashboard input {
     width: 100%;
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #000;
-    outline: none;
-    background: rgba(255, 102, 0, 0.15);
+    height: 100vh;
+    overflow: hidden;
 }
-
-/* Select options */
+.container {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    background: url(./volcano.jpg);
+    object-fit: cover;
+    background-size: cover;
+}
+.dashboard {
+    position: relative;
+    top: 100px;
+    padding: 50px;
+    background: rgb(255, 255, 255,0.15);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255,0.15);
+    border-radius: 20px;
+    width: 50%;
+    display: flex;
+    left: 400px;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 10px 25px 50px rgba(0,0,0,0.15);
+}
+.dashboard h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+    color: rgb(129,162,228);
+}
+.dashboard label {
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.dashboard input {
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    background: rgba(255,102,0,0.15);
+    outline: none;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+.dashboard input::placeholder {
+    color: rgba(0,0,0,0.5);
+}
+.option {
+    background: rgba(0,0,0,0.15);
+}
+#values {
+    color: black;
+    font-size: 15px;
+}
 .choices {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
-
 .choices div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
 }
-
 .choices select {
-    width: 100%;
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #000;
-    outline: none;
-    background: rgba(255, 255, 255, 0.7);
-}
-
-/* Buttons */
-#btn {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    background: #000;
-    color: #fff;
+    padding: 5px;
+    background: rgb(255, 255, 255,0.15);
+    border: 1px solid black;
+    outline: none;
 }
-
-/* Result */
-.resultss {
-    text-align: center;
-    font-size: 1.1rem;
-}
-
-/* Footer */
-.credits {
-    text-align: center;
+#btn {
+    height: 40px;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #d0c9d0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #000000;
 }
-
-@media (max-width: 480px) {
+.credits {
+    position: absolute;
+    /* color: rgba(255, 255, 255,0.732); */
+    margin-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+/* @media (min-width:200px) and (max-width:500px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+    }
     .dashboard {
+        width: 250px;
         padding: 20px;
     }
-
     .dashboard h2 {
-        font-size: 1.5rem;
+        font-size: 25px;
     }
-
-    .choices {
-        flex-direction: column;
+    .credits {
+        display: block;
+        text-align: center;
     }
 }
 
+@media (min-width:500px) and (max-width:720px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    .dashboard {
+        width: 250px;
+        padding: 20px;
+    }
+    .dashboard h2 {
+        font-size: 25px;
+    }
+    .credits {
+        display: block;
+    }
+}
+
+@media (min-width:76800px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    .dashboard {
+        width: 900px;
+        padding: 30px;
+    }
+    .dashboard h2 {
+        font-size: 60px;
+    }
+    .credits {
+        display: block;
+    }
+} */
